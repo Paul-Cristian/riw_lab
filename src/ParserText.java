@@ -28,8 +28,7 @@ public class ParserText {
 		}
 	}
 	
-	public void listFiles() {
-		String path = "F:\\eclipse\\workspace\\Parser\\Input";
+	public LinkedList<Object> listFiles(String path) {
 		File folder = new File(path);
 		File[] listOfFiles = folder.listFiles();
 		
@@ -40,7 +39,7 @@ public class ParserText {
 			if(!queueDirectories.isEmpty())
 				path = queueDirectories.pop().toString();
 			
-			System.out.println(path + "\n");
+			//System.out.println(path + "\n");
 			folder = new File(path);
 			
 			//path = "F:\\New folder";
@@ -49,21 +48,22 @@ public class ParserText {
 			for (File file : listOfFiles) {
 				if (file.isFile()) {
 					queueFiles.add(file);
-					System.out.println("File:" + file.getName());
+					//System.out.println("File:" + file.getName());
 				}
 				else if(file.isDirectory()) {
 					queueDirectories.add(file);
-					System.out.println("Dir:" + file.getName());
+					//System.out.println("Dir:" + file.getName());
 				}
 			}
 		} while(!queueDirectories.isEmpty());
 
-		while(!queueFiles.isEmpty()) {
-			textParse(new File(queueFiles.pop().toString()));
-		}
+		return queueFiles;
+//		while(!queueFiles.isEmpty()) {
+//			textParse(new File(queueFiles.pop().toString()));
+//		}
 	}
 	
-	public void textParse(File file) 
+	public Map<String, Integer> textParse(File file) 
 	{
 		Map<String, Integer> myMap = new HashMap<String, Integer>();
 		String dictionar = "";
@@ -99,6 +99,7 @@ public class ParserText {
 		{
 			e.printStackTrace();
 		}
+		return myMap;
 	}
 
 	public static int stringCompare(String str1, String str2) 

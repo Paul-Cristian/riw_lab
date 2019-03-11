@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Map;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -8,14 +10,15 @@ import org.jsoup.select.Elements;
 
 public class ParserHTML {
 	
-	private static File inputFile = new File("index.html");
-	private static File outputFile1 = new File("output1.txt");
+	private static File inputFile;
+	private static File outputFile1 = new File("output2.txt");
 	private static File outputFile2 = new File("output2.txt");
 	private static FileWriter writer;
 	private static Document document;
 	
-	public ParserHTML() throws IOException {
+	public ParserHTML(String htmlFileName) throws IOException {
 		// TODO Auto-generated constructor stub
+		inputFile = new File(htmlFileName);
 		document = Jsoup.parse(inputFile, null,"http://org.jsoup.com");
 	}
 	public void createWriter() throws IOException
@@ -92,8 +95,9 @@ public class ParserHTML {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		ParserHTML p = new ParserHTML();
+		ParserHTML p = new ParserHTML("index.html");
 		ParserText t = new ParserText();
+		Map<String, Integer> myMap;
 		p.createWriter();
 			
 		p.printTitle();
@@ -102,8 +106,8 @@ public class ParserHTML {
 		p.printHref();
 		
 		t.getStopWords();
-		t.listFiles();
+		t.listFiles("F:\\eclipse\\workspace\\Parser\\HTML body content files");
 		
-		//t.textParse(new File("1.txt"));
+		myMap = t.textParse(new File("1.txt"));
 	}
 }
