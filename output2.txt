@@ -1,0 +1,115 @@
+index, follow
+Link: https://moodle.dc.ac.tuiasi.ro/
+Text: MOODLE
+Link: https://moodle.dc.ac.tuiasi.ro/my/
+Text: Dashboard
+Link: https://moodle.dc.ac.tuiasi.ro/user/profile.php?id=1040
+Text: Profile
+Link: https://moodle.dc.ac.tuiasi.ro/grade/report/overview/index.php
+Text: Grades
+Link: https://moodle.dc.ac.tuiasi.ro/message/index.php
+Text: Messages
+Link: https://moodle.dc.ac.tuiasi.ro/user/preferences.php
+Text: Preferences
+Link: https://moodle.dc.ac.tuiasi.ro/login/logout.php?sesskey=5d0zSDNKyw
+Text: Log out
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=2&lang=en
+Text: English ?(en)?
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=2&lang=ro
+Text: Român? ?(ro)?
+Link: https://moodle.dc.ac.tuiasi.ro/
+Text: Home
+Link: https://moodle.dc.ac.tuiasi.ro/course/index.php?categoryid=25
+Text: BSc Year 4
+Link: https://moodle.dc.ac.tuiasi.ro/course/index.php?categoryid=48
+Text: Information Technology
+Link: https://moodle.dc.ac.tuiasi.ro/course/index.php?categoryid=50
+Text: 2nd semester
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335
+Text: Reg?sirea informa?iilor pe web
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=2
+Text: Laboratoare
+Link: https://moodle.dc.ac.tuiasi.ro/mod/forum/view.php?id=669
+Text: News forum
+Link: https://moodle.dc.ac.tuiasi.ro/mod/resource/view.php?id=11307
+Text: Prezentarea disciplinei File
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=1
+Text: ?Cursuri
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=3
+Text: Proiect?
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=2
+Text: Laboratoare
+Link: https://moodle.dc.ac.tuiasi.ro/mod/resource/view.php?id=11313
+Text: L01 - Parser HTML. Extragere de cuvinte File
+Link: https://moodle.dc.ac.tuiasi.ro/mod/resource/view.php?id=11550
+Text: L02 - Extragerea cuvintelor din documente text (2) File
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=1
+Text: ?Cursuri
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=3
+Text: Proiect?
+Link: https://moodle.dc.ac.tuiasi.ro/
+Text: Home
+Link: https://moodle.dc.ac.tuiasi.ro/my/
+Text: Dashboard
+Link: https://moodle.dc.ac.tuiasi.ro/badges/view.php?type=1
+Text: Site badges
+Link: https://moodle.dc.ac.tuiasi.ro/tag/search.php
+Text: Tags
+Link: https://moodle.dc.ac.tuiasi.ro/search/index.php
+Text: Search
+Link: https://moodle.dc.ac.tuiasi.ro/calendar/view.php?view=month
+Text: Calendar
+Link: https://moodle.dc.ac.tuiasi.ro/mod/forum/view.php?id=9
+Text: Nout??i
+Link: https://moodle.dc.ac.tuiasi.ro/mod/book/view.php?id=7964
+Text: Ocupare S?li AC
+Link: https://moodle.dc.ac.tuiasi.ro/mod/url/view.php?id=8937
+Text: Calendar, grupe ?i orar 2018-2019
+Link: https://moodle.dc.ac.tuiasi.ro/mod/folder/view.php?id=9063
+Text: Planuri de înv???mânt 2018-2019 - licen??
+Link: https://moodle.dc.ac.tuiasi.ro/mod/folder/view.php?id=9065
+Text: Planuri de înv???mânt 2018-2019 - master
+Link: https://moodle.dc.ac.tuiasi.ro/mod/folder/view.php?id=11526
+Text: Grupe anul univ. 2018-2019
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335
+Text: Reg?sirea informa?iilor pe web
+Link: https://moodle.dc.ac.tuiasi.ro/user/index.php?id=335
+Text: Participants
+Link: https://moodle.dc.ac.tuiasi.ro/user/view.php?id=1040&course=335
+Text: Paul-Cristian Brînz?
+Link: https://moodle.dc.ac.tuiasi.ro/badges/view.php?type=2&id=335
+Text: Course badges
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=1
+Text: Cursuri
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=2
+Text: Laboratoare
+Link: https://moodle.dc.ac.tuiasi.ro/mod/resource/view.php?id=11313
+Text: L01 - Parser HTML. Extragere de cuvinte
+Link: https://moodle.dc.ac.tuiasi.ro/mod/resource/view.php?id=11550
+Text: L02 - Extragerea cuvintelor din documente text (2)
+Link: https://moodle.dc.ac.tuiasi.ro/course/view.php?id=335&section=3
+Text: Proiect
+Link: https://moodle.dc.ac.tuiasi.ro/grade/report/index.php?id=335
+Text: Grades
+Link: https://moodle.dc.ac.tuiasi.ro/moodle-admin/tool/lp/coursecompetencies.php?courseid=335
+Text: Competencies
+Link: https://moodle.dc.ac.tuiasi.ro/mod/forum/search.php?id=335
+Text: Advanced search
+Link: https://moodle.dc.ac.tuiasi.ro/help.php?component=moodle&identifier=search&lang=en
+Text: 
+Link: https://moodle.dc.ac.tuiasi.ro/mod/forum/discuss.php?d=990
+Text: Par?ial nr. 2
+Link: https://moodle.dc.ac.tuiasi.ro/mod/forum/view.php?f=573
+Text: Older topics
+Link: https://moodle.dc.ac.tuiasi.ro/calendar/view.php?view=upcoming&course=335
+Text: Go to calendar
+Link: https://moodle.dc.ac.tuiasi.ro/calendar/event.php?action=new&course=335
+Text: New event
+Link: https://moodle.dc.ac.tuiasi.ro/course/recent.php?id=335
+Text: Full report of recent activity...
+Link: https://moodle.dc.ac.tuiasi.ro/user/profile.php?id=1040
+Text: Paul-Cristian Brînz?
+Link: https://moodle.dc.ac.tuiasi.ro/login/logout.php?sesskey=5d0zSDNKyw
+Text: Log out
+Link: https://moodle.dc.ac.tuiasi.ro/
+Text: Home
