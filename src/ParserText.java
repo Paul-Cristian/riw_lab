@@ -39,20 +39,16 @@ public class ParserText {
 			if(!queueDirectories.isEmpty())
 				path = queueDirectories.pop().toString();
 			
-			//System.out.println(path + "\n");
 			folder = new File(path);
-			
-			//path = "F:\\New folder";
+
 			if(folder.listFiles() != null)
 				listOfFiles = folder.listFiles();
 			for (File file : listOfFiles) {
 				if (file.isFile()) {
 					queueFiles.add(file);
-					//System.out.println("File:" + file.getName());
 				}
 				else if(file.isDirectory()) {
 					queueDirectories.add(file);
-					//System.out.println("Dir:" + file.getName());
 				}
 			}
 		} while(!queueDirectories.isEmpty());

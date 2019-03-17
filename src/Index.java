@@ -1,19 +1,24 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Index {
 
-	public static void createMapFiles(LinkedList<Object> listOfFiles) throws IOException {
+	static HashMap<String, Map<String, Integer>> map = new HashMap<String, Map<String, Integer>>();
+	
+	
+	public static HashMap<String, Map<String, Integer>> createMapFiles(LinkedList<Object> listOfFiles) throws IOException {
 		FileWriter writer = new FileWriter(new File("F:/eclipse/workspace/Parser/MapingFiles/MappingFile1.txt"));
 		FileWriter writerGlobal = new FileWriter(new File("F:/eclipse/workspace/Parser/MapingFiles/MappingFile.txt"));
 		
 		File previousFile = new File("");
 		int count = 1, ok = 0;
-		Map<String, Integer> myMap;
+		Map<String, Integer> myMap = new HashMap<String, Integer>();
+		
 		ParserText t = new ParserText();
 		t.getStopWords();
 		
@@ -32,19 +37,25 @@ public class Index {
 			if(filePath.contains(".txt")) {
 				File file = new File(currentWriterName);
 				myMap = t.textParse(new File(filePath));
+				
+			
+				map.put(filePath, myMap);
+				
 				writer.append(filePath + ", " + myMap + System.lineSeparator() + System.lineSeparator());
-				writerGlobal.write(filePath + ", " + file.toString() + System.lineSeparator());
+				writerGlobal.write(filePath + "," + file.toString() + System.lineSeparator());
 			}	
 
 			previousFile = f;
 			ok = 1;
 		}
+		
 		writer.close();
 		writerGlobal.close();
+	
+		return map;
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		LinkedList<Object> listOfFiles;
 		String fName = "";
 		ParserText t = new ParserText();
@@ -58,7 +69,6 @@ public class Index {
 	    try {
 			createMapFiles(listOfFiles);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	    //System.out.println(fName);
