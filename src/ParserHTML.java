@@ -1,34 +1,38 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Map;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class ParserHTML {
+public class ParserHtml {
 	
 	private static File inputFile;
-	private static File outputFile1 = new File("output2.txt");
-	private static File outputFile2 = new File("output2.txt");
+	private static File outputFile1;
+	private static File outputFile2;
 	private static FileWriter writer;
 	private static Document document;
 	
-	public ParserHTML(String htmlFileName) throws IOException {
-		// TODO Auto-generated constructor stub
+	public ParserHtml(String htmlFileName) throws IOException {
+		Path resultsPath = Files.createDirectories(Paths.get("ParserOutputs"));
 		inputFile = new File(htmlFileName);
+		outputFile1 = new File(resultsPath + "/output1.txt");
+		outputFile2 = new File(resultsPath + "/output2.txt");
 		document = Jsoup.parse(inputFile, null,"http://org.jsoup.com");
 	}
+	
 	public void createWriter() throws IOException
 	{
 		writer = new FileWriter(outputFile1);
 	}
 	
-	private void printTitle() {
+	public void printTitle() {
 		try {
-			//document = Jsoup.parse(inputFile, null,"http://org.jsoup.com");
 			String title = document.title();
 			
 	        writer.write(title + System.lineSeparator());
@@ -41,7 +45,6 @@ public class ParserHTML {
 	
 	public void printMeta() {
 		try {
-			//document = Jsoup.parse(inputFile, null,"http://org.jsoup.com");
 		 
 			String keywords = document.select("meta[name=keywords]").get(0).attr("content");
 			String description = document.select("meta[name=description]").get(0).attr("content");
@@ -57,7 +60,7 @@ public class ParserHTML {
 
 	public void printTextBody() {
 		try {
-			//document = Jsoup.parse(inputFile, null,"http://org.jsoup.com");
+
 			String textBody = document.body().text();
 
 			writer.write(textBody);
@@ -69,10 +72,10 @@ public class ParserHTML {
 		    }
 	}
 	
-	private void printHref() {
+	public void printHref() {
 		  try {
+			  
 			  writer = new FileWriter(outputFile2);
-			  //document = Jsoup.parse(inputFile, null,"http://org.jsoup.com");
 			  String robots = document.select("meta[name=robots]").get(0).attr("content");
 			  Elements links = document.select("a[href]");
             
@@ -92,22 +95,5 @@ public class ParserHTML {
 		  } catch (IOException e) {
 			  e.printStackTrace();
 			  }
-	}
-	
-	public static void main(String[] args) throws IOException {
-		ParserHTML p = new ParserHTML("index.html");
-		ParserText t = new ParserText();
-		Map<String, Integer> myMap;
-		p.createWriter();
-			
-		p.printTitle();
-		p.printMeta();
-		p.printTextBody();
-		p.printHref();
-		
-		t.getStopWords();
-		t.listFiles("F:\\eclipse\\workspace\\Parser\\HTML body content files");
-		
-		myMap = t.textParse(new File("1.txt"));
 	}
 }
